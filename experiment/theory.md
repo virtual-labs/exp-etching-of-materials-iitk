@@ -144,7 +144,7 @@ Compression mounting is a technique used to encapsulate ceramic or metallic spec
 
 Castable liquid resins are used for mounting fragile and porous ceramics, filling voids in refractory bricks, mineral sections, and microelectronic devices. A vacuum chamber aids in mold filling, while low-stress curing preserves delicate structures. Fragile ceramics can be mounted before sawing to prevent damage.Also called cold mounting, this method involves an exothermic polymerization reaction, reaching ~120°C, lower than the 150°C of compression mounting. Unfilled resins have low abrasion resistance, which can be improved by adding ceramic particles.<br><br>
 
-<image src="images\image_3.png"><br>
+<image src="images\image_3.png"><br><br>
 
 The below table provides information on different compression mounting resins, their fillers, characteristics, and applications.<br><br>
 
@@ -181,6 +181,6 @@ Different ceramics require different etchants due to their varying compositions.
 
 Thermal etching is a technique used to reveal the microstructure of ceramic materials without the use of chemical reagents. It involves heating the polished ceramic sample to a temperature slightly below its sintering point, allowing surface diffusion and grain boundary grooving to occur. This controlled heating process enhances the visibility of grain boundaries, phase distribution, and porosity under a microscope. Unlike chemical etching, thermal etching does not introduce artificial defects or contamination, making it particularly useful for studying intrinsic microstructural features. It is essential for ceramics that are chemically resistant or prone to excessive dissolution in chemical etchants, such as alumina (Al<sub>2</sub>O<sub>3</sub>), silicon carbide (SiC), and zirconia (ZrO<sub>2</sub>). <br>
 
-<image src="images\image_6.png"><br>
+<image src="images\image_6.png"><br><br>
 <image src="images\image_7.png"><br>
 
