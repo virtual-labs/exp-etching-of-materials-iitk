@@ -169,6 +169,7 @@ Etching reveals and delineates grain boundaries and other microstructural featur
 
 <image src="images\image_5.png"><br>
 
+**Figure:** Thermally etched 99.9% alumina <br> <br>
 Etching of ceramic samples can be broadly classified into chemical etching, thermal etching, and plasma etching, each tailored to specific materials and analysis requirements. Below are the different types of etching techniques along with common etchants used for ceramic materials- <br><br>
 
 <b>5.1 Chemical Etching :</b><br><br>
@@ -182,5 +183,7 @@ Different ceramics require different etchants due to their varying compositions.
 Thermal etching is a technique used to reveal the microstructure of ceramic materials without the use of chemical reagents. It involves heating the polished ceramic sample to a temperature slightly below its sintering point, allowing surface diffusion and grain boundary grooving to occur. This controlled heating process enhances the visibility of grain boundaries, phase distribution, and porosity under a microscope. Unlike chemical etching, thermal etching does not introduce artificial defects or contamination, making it particularly useful for studying intrinsic microstructural features. It is essential for ceramics that are chemically resistant or prone to excessive dissolution in chemical etchants, such as alumina (Al<sub>2</sub>O<sub>3</sub>), silicon carbide (SiC), and zirconia (ZrO<sub>2</sub>). <br>
 
 <image src="images\image_6.png"><br><br>
+
+**Figure:** Thermally etched Gd-doped CeO<sub>2</sub> <br> <br>
 <image src="images\image_7.png"><br>
 
