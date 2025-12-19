@@ -117,7 +117,6 @@ Preparing ceramic samples for ceramography involves several critical stages to e
 Precision cutting tools, diamond saws, and abrasive slurries are commonly used for sectioning ceramics, ensuring minimal damage to the material’s structure. Mounting the samples in resin or epoxy provides stability during subsequent grinding and polishing stages.<br><br>
 
 <b>1 Sawing :</b><br><br>
-
 Sawing is carried out to obtain a representative section of a ceramic component for subsequent polishing and microscopic examination, or to isolate a specific region of interest. The operation must be performed with care to minimize the introduction of damage such as cracking, chipping, or surface flaws, thereby preserving the structural integrity of the specimen for ceramographic analysis. <br>
 
 Ceramic specimens should be sectioned using a high-speed cut-off machine equipped with a water-cooled, low-density, metal-bonded diamond wafering blade (Fig. 1(a)). In certain cases, a resin-bonded diamond blade may be preferable depending on the material characteristics. For dense ceramics, a normal load of approximately 5–10 N (500–1000 gf) and a blade rotation speed of 2000–5000 rpm are recommended. For refractories, concrete, and semiconductor materials, lower cutting conditions of ~1 N load and ~500 rpm are typically sufficient.<br>
@@ -131,7 +130,6 @@ When oil-based lubricants are employed, the specimen should be thoroughly cleane
 <image src="images\image_1.png"><br>
 
 <b>2 Mounting :</b><br><br>
-
 Ceramic specimens may be mounted using two primary approaches, selected according to their density, mechanical integrity, and porosity. Dense ceramics are most effectively mounted using powdered thermosetting resins that polymerize under uniaxial compression, often containing fillers to improve edge retention and mechanical support. Traditional manual mounting presses operate on a screw or jack-based mechanism, whereas modern automated presses employ controlled heating, water cooling, and compressed air to achieve faster and more reproducible mounting cycles.<br>
 
 In contrast, fragile, porous, or friable ceramics are better suited for castable liquid resins, which polymerize through the addition of a catalyst or hardener. These resins provide gentle encapsulation and minimize mechanical damage during subsequent preparation steps. Common ceramic materials such as alumina (Al2O3), zirconia (ZrO2), and silicon carbide (SiC) can be mounted using either cold- or hot-mounting techniques. Cold mounting typically involves embedding the specimen in epoxy or acrylic resin and curing at room temperature or under mild heating (~30–40 °C), making it suitable for all three ceramics by avoiding thermally induced stresses. Hot mounting involves pressing the specimen in a thermosetting resin, such as bakelite, at elevated temperatures (~180 °C) and pressures (250–300 bar) for several minutes. Although hot mounting provides excellent mechanical support and edge definition, careful control is required to prevent cracking or damage, particularly in brittle materials such as silicon carbide.
@@ -146,7 +144,6 @@ Compression mounting is a technique used to encapsulate ceramic or metallic spec
 •	Compression Mounting-Hydraulic Mounting Press. <br><br>
 
 <b>2.2 Castable Mounting (Cold mounting) :</b><br><br>
-
 Castable liquid resins are employed for mounting fragile, porous, or friable ceramic specimens, including refractory bricks, mineral sections, and microelectronic components. These resins readily infiltrate pores and voids, providing mechanical support without inducing damage. The use of a vacuum chamber is recommended to enhance resin penetration and eliminate trapped air, while low-stress curing conditions help preserve delicate microstructural features. In cases of highly fragile ceramics, mounting may be performed prior to sawing to prevent fracture or edge damage.<br>
 
 This approach, commonly referred to as cold mounting, involves an exothermic polymerization reaction with peak temperatures typically reaching ~120 °C, which is substantially lower than the ~150 °C encountered during compression (hot) mounting. Although unfilled castable resins exhibit relatively low abrasion resistance, this limitation can be mitigated by incorporating ceramic filler particles, thereby improving edge retention and wear resistance during subsequent grinding and polishing operations.<br>
@@ -158,7 +155,6 @@ The below table provides information on different compression mounting resins, t
 <image src="images\image_4.png"><br>
 
 <b>3 Grinding :</b><br><br>
-
 Grinding is a critical step in the preparation of ceramic specimens for microstructural characterization, as it produces a flat and uniformly smooth surface suitable for subsequent polishing and etching. Owing to the high hardness and brittleness of ceramics, improper grinding can introduce artifacts such as microcracks, edge chipping, and subsurface damage, which may obscure or distort the true microstructure. To minimize these effects, grinding is performed using a controlled, sequential abrasive process.<br>
 
 Grinding typically begins with a coarse silicon carbide (SiC) abrasive paper (≈240 grit) to remove sectioning damage and major surface irregularities. The specimen is then progressively ground using intermediate (400–600 grit) and fine (800–1200 grit) abrasives to gradually refine the surface and eliminate scratches from the previous step. The choice of grit size and progression is governed by the hardness of the ceramic and the required surface quality, with care taken to avoid excessive material removal.<br>
@@ -168,11 +164,9 @@ Adequate lubrication, typically with water or alcohol-based fluids, is essential
 Effective grinding is essential for the success of subsequent polishing and etching stages. A properly ground ceramic specimen exhibits minimal subsurface damage, enabling accurate and high-resolution microstructural analysis using optical and electron microscopy techniques.<br><br>
 
 <b>4 Polishing :</b><br><br>
-
 Polishing is a crucial step in ceramography to achieve a smooth, scratch-free surface for microscopic examination. After grinding, the ceramic sample undergoes a series of polishing stages using progressively finer abrasives. Diamond suspensions (6 µm, 3 µm, and 1 µm) are commonly used, followed by a final polish with colloidal silica (0.05 µm) to remove any residual scratches and enhance contrast. The polishing process must be carefully controlled to prevent surface damage, such as pull-outs or smearing, which can obscure microstructural features. Proper lubrication and controlled force ensure a high-quality finish suitable for optical and electron microscopy.<br><br>
 
 <b>5 Etching :</b><br><br>
-
 Etching is a critical step in the microscopic characterization of ceramic materials, as it reveals key microstructural features such as grain boundaries, secondary phases, and defects that are not visible on a polished surface. Compared to metals, ceramics are generally more chemically inert, making etching more challenging and necessitating the use of material-specific etchants or thermal treatments. The primary objective of etching is to enhance contrast under optical or electron microscopy by selectively attacking specific phases or by generating surface relief, thereby enabling accurate assessment of grain morphology, phase distribution, and structural integrity. Proper etching is essential for reliable microstructural interpretation in quality control, failure analysis, and materials development.<br>
 
 In ceramography, two principal etching approaches are commonly employed: selective chemical etching and thermal etching. Chemical etching involves controlled surface corrosion using appropriate reagents, whereas thermal etching produces grain-boundary relief through high-temperature exposure without significant material removal.<br>
@@ -187,13 +181,11 @@ Each etching technique is selected based on the chemical stability, bonding char
 Etching of ceramic samples can be broadly classified into chemical etching, thermal etching, and plasma etching, each tailored to specific materials and analysis requirements. Below are the different types of etching techniques along with common etchants used for ceramic materials- <br><br>
 
 <b>5.1 Chemical Etching :</b><br><br>
-
 Chemical etching is a widely employed technique in ceramography to enhance the visibility of microstructural features such as grain boundaries, phase distributions, and defects during microscopic examination. Because most ceramics are chemically inert, effective etching requires carefully selected reagents that can selectively attack specific phases or induce controlled surface relief. The process typically involves immersing a well-polished ceramic specimen in an appropriate chemical etchant that reacts preferentially with certain constituents of the material, thereby revealing the underlying microstructure.<br>
 
 The choice of etchant depends strongly on the ceramic composition. For example, alumina is commonly etched using hot phosphoric acid (H<sub>3</sub>PO<sub>4</sub>), whereas ZrO₂ may be etched using HF or mixtures of HCl and H<sub>2</sub>O<sub>2</sub>. Silicon-based ceramics such as SiC and Si<sub>3</sub>N<sub>4</sub>, owing to their high chemical stability, often require more aggressive etching conditions, including molten alkalis (e.g., NaOH or KOH) or fluorine-containing acids. Etching parameters such as time, temperature, and reagent concentration must be carefully controlled to avoid excessive material removal, surface damage, or misrepresentation of the true microstructure.<br><br>
 
 <b>5.2 Thermal Etching :</b><br><br>
-
 Thermal etching is a microstructural revelation technique used for ceramic materials that avoids the use of chemical reagents. In this method, a polished ceramic specimen is heated to a temperature slightly below its sintering temperature, promoting surface diffusion and grain-boundary grooving. This controlled thermal treatment enhances the contrast of grain boundaries, phase distribution, and porosity during microscopic examination. Unlike chemical etching, thermal etching does not introduce extrinsic contamination or preferential chemical attack, making it particularly suitable for examining intrinsic microstructural features. The technique is especially effective for chemically inert or highly corrosion-resistant ceramics, such as Al<sub>2</sub>O<sub>3</sub>, SiC, and ZrO₂.<br>
 
 <image src="images\image_6.png"><br><br>
@@ -202,7 +194,6 @@ Thermal etching is a microstructural revelation technique used for ceramic mater
 <image src="images\image_7.png"><br>
 
 <b>5.3 Plasma Etching :</b><br><br>
-
 Plasma etching is an advanced, non-contact technique used to reveal the microstructure of ceramic materials by controlled surface modification using ionized gases. In this method, the polished ceramic specimen is exposed to a low-pressure plasma, typically generated from reactive gases such as oxygen, argon, CF₄, or SF₆, which selectively interacts with the surface through physical sputtering and/or chemical reactions. Plasma etching enhances microstructural contrast by preferentially etching grain boundaries, secondary phases, or defect-rich regions, thereby making features such as grain morphology, phase distribution, and porosity clearly visible under optical or electron microscopy.<br>
 
 Compared to chemical etching, plasma etching offers superior control over etch depth, uniformity, and selectivity, while avoiding liquid chemicals that may cause uncontrolled dissolution or contamination. It is particularly effective for chemically inert or complex ceramics, including SiC, Si<sub>3</sub>N<ub>4</sub>, Al<sub>2</sub>O<sub>3</sub>, ZrO₂, and advanced ceramic coatings used in microelectronics and energy devices. By adjusting plasma parameters such as gas composition, power, pressure, and exposure time, the etching process can be finely tuned to reveal intrinsic microstructural features without inducing thermal damage or mechanical stress. As a result, plasma etching is widely employed in high-resolution microstructural analysis, failure investigations, and the preparation of ceramics for SEM and EBSD studies.
