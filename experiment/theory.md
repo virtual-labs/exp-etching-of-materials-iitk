@@ -149,7 +149,7 @@ Castable liquid resins are employed for mounting fragile, porous, or friable cer
 
 This approach, commonly referred to as cold mounting, involves an exothermic polymerization reaction with peak temperatures typically reaching ~120 °C, which is substantially lower than the ~150 °C encountered during compression (hot) mounting. Although unfilled castable resins exhibit relatively low abrasion resistance, this limitation can be mitigated by incorporating ceramic filler particles, thereby improving edge retention and wear resistance during subsequent grinding and polishing operations. Various types of compression-moulding resins, along with their fillers, characteristics, and applications, are provided in Table 1.<br>
 
-<image src="images\image_3.png"><br><br>
+<image src="images\image_3.png"><br>
 Figure 2: Images showing various embedded ceramographic sections<br>
 
 The below table provides information on different compression mounting resins, their fillers, characteristics, and applications.<br><br>
@@ -180,7 +180,6 @@ Each etching technique is selected based on the chemical stability, bonding char
 
 <!-- <image src="images\image_5.png"><br> -->
 
-**Figure:** Thermally etched 99.9% alumina <br> <br>
 Etching of ceramic samples can be broadly classified into chemical etching, thermal etching, and plasma etching, each tailored to specific materials and analysis requirements. Below are the different types of etching techniques along with common etchants used for ceramic materials- <br><br>
 
 <b>5.1 Chemical Etching :</b><br><br>
@@ -192,9 +191,6 @@ The choice of etchant depends strongly on the ceramic composition. For example, 
 Thermal etching is a microstructural revelation technique used for ceramic materials that avoids chemical reagents. In this method, a polished ceramic specimen is heated to a temperature slightly below its sintering temperature (typically 0.8–0.95 T<sub>sinter</sub>), promoting surface diffusion and grain-boundary grooving. This controlled thermal treatment enhances the contrast of grain boundaries, phase distribution, and porosity during microscopic examination. Unlike chemical etching, thermal etching avoids extrinsic contamination or preferential chemical attack, making it ideal for intrinsic microstructural analysis. The technique excels for chemically inert ceramics such as Al<sub>2</sub>O<sub>3</sub>, SiC, and CeO₂. Figure 3 shows a thermally etched scandia-stabilized zirconia sample.<br>
 
 <image src="images\image_6.png"><br><br>
-
-**Figure:** Thermally etched Gd-doped CeO<sub>2</sub> <br> <br>
-<image src="images\image_7.png"><br>
 
 <b>5.3 Plasma Etching :</b><br><br>
 Plasma etching is an advanced, non-contact technique used to reveal ceramic microstructures by controlled surface modification with ionized gases. A polished specimen is exposed to low-pressure plasma from reactive gases such as oxygen, argon, CF₄, or SF₆, enabling selective interaction via physical sputtering and/or chemical reactions. This preferentially etches grain boundaries, secondary phases, or defect-rich regions, enhancing visibility of grain morphology, phase distribution, and porosity under optical or electron microscopy.<br>
