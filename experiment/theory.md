@@ -154,7 +154,7 @@ Figure 2: Images showing various embedded ceramographic sections<br>
 
 The below table provides information on different compression mounting resins, their fillers, characteristics, and applications.<br><br>
 
-<image src="images\image_4.png"><br>
+<image src="images\image_4(2).png"><br>
 Table 1: Various compression mounting resins, including their composition, fillers, key characteristics, and applications.<br>
 
 <b>3 Grinding :</b><br><br>
