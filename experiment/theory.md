@@ -133,7 +133,7 @@ Figure 1: Images showing (a) a high-speed cut-off machine and (b) a low-speed sa
 <b>2 Mounting :</b><br><br>
 Ceramic specimens may be mounted using two primary approaches, selected according to their density, mechanical integrity, and porosity. Dense ceramics are most effectively mounted using powdered thermosetting resins that polymerize under uniaxial compression, often containing fillers to improve edge retention and mechanical support. Traditional manual mounting presses operate on a screw or jack-based mechanism, whereas modern automated presses employ controlled heating, water cooling, and compressed air to achieve faster and more reproducible mounting cycles.<br>
 
-In contrast, fragile, porous, or friable ceramics are better suited for castable liquid resins, which polymerize through the addition of a catalyst or hardener. These resins provide gentle encapsulation and minimize mechanical damage during subsequent preparation steps. Common ceramic materials such as alumina (Al2O3), zirconia (ZrO2), and silicon carbide (SiC) can be mounted using either cold- or hot-mounting techniques. Cold mounting typically involves embedding the specimen in epoxy or acrylic resin and curing at room temperature or under mild heating (~30–40 °C), making it suitable for all three ceramics by avoiding thermally induced stresses. Hot mounting involves pressing the specimen in a thermosetting resin, such as bakelite, at elevated temperatures (~180 °C) and pressures (250–300 bar) for several minutes. Although hot mounting provides excellent mechanical support and edge definition, careful control is required to prevent cracking or damage, particularly in brittle materials such as silicon carbide.
+In contrast, fragile, porous, or friable ceramics are better suited for castable liquid resins, which polymerize through the addition of a catalyst or hardener. These resins provide gentle encapsulation and minimize mechanical damage during subsequent preparation steps. Common ceramic materials such as alumina (Al2O3), zirconia (ZrO2), and silicon carbide (SiC) can be mounted using either cold- or hot-mounting techniques. Cold mounting typically involves embedding the specimen in epoxy or acrylic resin and curing at room temperature or under mild heating (30–40 °C), making it suitable for all three ceramics by avoiding thermally induced stresses. Hot mounting involves pressing the specimen in a thermosetting resin, such as bakelite, at elevated temperatures (~180 °C) and pressures (250–300 bar) for several minutes. Although hot mounting provides excellent mechanical support and edge definition, careful control is required to prevent cracking or damage, particularly in brittle materials such as silicon carbide.
 
 <b>2.1 Compression Mounting :</b><br><br>
 
@@ -154,7 +154,7 @@ Figure 2: Images showing various embedded ceramographic sections<br>
 
 The below table provides information on different compression mounting resins, their fillers, characteristics, and applications.<br><br>
 
-<image src="images\image_4.png"><br>
+<image src="images\image_4 (2).png"><br>
 Table 1: Various compression mounting resins, including their composition, fillers, key characteristics, and applications.<br>
 
 <b>3 Grinding :</b><br><br>
