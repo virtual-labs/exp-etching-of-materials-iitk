@@ -140,7 +140,7 @@ In contrast, fragile, porous, or friable ceramics are better suited for castable
 Compression mounting is a technique used to encapsulate ceramic or metallic specimens in a hardened resin for easier handling during microstructural analysis. This method is ideal for dense, non-porous materials that can withstand heat and pressure without degradation. It can be done in two ways- <br>
 
 •	Manual Hydraulic Mounting Press.<br>
-•	Automatic Hydraulic Mounting Press <br><br>
+•	Automatic Hydraulic Mounting Press. <br><br>
 The images of both the old-style and automatic mounting press are shown in Fig. 2.
 
 <image src="images\image_2.png"><br>
