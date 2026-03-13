@@ -299,30 +299,56 @@
                 checkCompletion();
             }
         }
-        function checkCompletion() {
+        function checkCompletion() 
+        {
             const result = document.getElementById('result');
+
             if (dropped.every(x => x !== null)) {
-                if (dropped.every((val, idx) => val === correctSteps[idx])) {
+
+                let hasError = false;
+
+                for (let i = 0; i < correctSteps.length; i++) {
+                    const box = document.getElementById('drop' + i);
+
+                    if (dropped[i] === correctSteps[i]) {
+                        box.style.backgroundColor = '#c8e6c9'; // green
+                        box.style.border = '2px solid #388e3c';
+                    } else {
+                        box.style.backgroundColor = '#ffcdd2'; // red
+                        box.style.border = '2px solid #d32f2f';
+                        hasError = true;
+                    }
+                }
+
+                if (hasError) {
+                    result.textContent = 'Some steps are incorrect. Resetting...';
+                    result.style.backgroundColor = 'lightpink';
+                    result.style.display = 'flex';
+
+                    setTimeout(() => {
+                        resetLevel();
+                    }, 2000);
+
+                } else {
+
                     if (currentLevel < levels.length - 1) {
+
                         result.textContent = 'Correct! Loading next step...';
                         result.style.backgroundColor = 'lightgreen';
                         result.style.display = 'flex';
+
                         setTimeout(() => {
                             loadNextLevel();
                         }, 1500);
+
                     } else {
-                        result.textContent = 'Congratulations! All steps are in the correct order and you have completed all tasks!';
+
+                        result.textContent =
+                            'Congratulations! All steps are correct and you completed all tasks!';
                         result.style.backgroundColor = 'lightgreen';
                         result.style.display = 'flex';
                     }
-                } else {
-                    result.textContent = 'Some steps are incorrect. Please try again!';
-                    result.style.backgroundColor = 'lightpink';
-                    result.style.display = 'flex';
                 }
-            } else {
-                result.textContent = '';
-                result.style.display = 'none';
             }
         }
         function loadNextLevel() {
@@ -347,6 +373,29 @@
                 dropBox.classList.remove('filled');
             }
             renderOptions();
+            const result = document.getElementById('result');
+            result.textContent = '';
+            result.style.display = 'none';
+        }
+        function resetLevel() 
+        {
+
+            dropped = Array(correctSteps.length).fill(null);
+
+            for (let i = 0; i < 6; i++) {
+
+                const dropBox = document.getElementById('drop' + i);
+
+                dropBox.textContent = '';
+                dropBox.classList.remove('filled');
+
+                dropBox.style.backgroundColor = '#e3f2fd';
+                dropBox.style.border = '2px dashed #1976d2';
+            }
+
+            options = shuffle([...commonOptions]);
+            renderOptions();
+
             const result = document.getElementById('result');
             result.textContent = '';
             result.style.display = 'none';
