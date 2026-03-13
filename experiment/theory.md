@@ -135,13 +135,12 @@ Ceramic specimens may be mounted using two primary approaches, selected accordin
 
 In contrast, fragile, porous, or friable ceramics are better suited for castable liquid resins, which polymerize through the addition of a catalyst or hardener. These resins provide gentle encapsulation and minimize mechanical damage during subsequent preparation steps. Common ceramic materials such as alumina (Al2O3), zirconia (ZrO2), and silicon carbide (SiC) can be mounted using either cold- or hot-mounting techniques. Cold mounting typically involves embedding the specimen in epoxy or acrylic resin and curing at room temperature or under mild heating (30–40 °C), making it suitable for all three ceramics by avoiding thermally induced stresses. Hot mounting involves pressing the specimen in a thermosetting resin, such as bakelite, at elevated temperatures (~180 °C) and pressures (250–300 bar) for several minutes. Although hot mounting provides excellent mechanical support and edge definition, careful control is required to prevent cracking or damage, particularly in brittle materials such as silicon carbide.
 
-<b>2.1 Compression Mounting :</b><br><br>
+<b>2.1 Compression Mounting :</b><br>
 
 Compression mounting is a technique used to encapsulate ceramic or metallic specimens in a hardened resin for easier handling during microstructural analysis. This method is ideal for dense, non-porous materials that can withstand heat and pressure without degradation. It can be done in two ways- <br>
 
 •	Manual Hydraulic Mounting Press.<br>
-•	Automatic Hydraulic Mounting Press <br><br>
-
+•	Automatic Hydraulic Mounting Press. <br><br>
 The images of both the old-style and automatic mounting press are shown in Fig. 2.
 
 <image src="images\image_2.png"><br>
