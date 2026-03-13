@@ -137,20 +137,24 @@ In contrast, fragile, porous, or friable ceramics are better suited for castable
 
 <b>2.1 Compression Mounting :</b><br><br>
 
+Compression mounting is a technique used to encapsulate ceramic or metallic specimens in a hardened resin for easier handling during microstructural analysis. This method is ideal for dense, non-porous materials that can withstand heat and pressure without degradation. It can be done in two ways- <br>
+
+•	Manual Hydraulic Mounting Press.<br>
+•	Automatic Hydraulic Mounting Press <br><br>
+
+The images of both the old-style and automatic mounting press are shown in Fig. 2.
+
 <image src="images\image_2.png"><br>
 
-Compression mounting is a technique used to encapsulate ceramic or metallic specimens in a hardened resin for easier handling during microstructural analysis. This method is ideal for dense, non-porous materials that can withstand heat and pressure without degradation. It can be done two ways- <br>
-
-•	Compression Mounting-Automatic Mounting Press<br>
-•	Compression Mounting-Hydraulic Mounting Press. <br><br>
+Figure 2: The manual (a) and automatic (b) hydraulic mounting press for compression mounting of ceramic specimens. 
 
 <b>2.2 Castable Mounting (Cold mounting) :</b><br><br>
-Castable liquid resins are employed for mounting fragile, porous, or friable ceramic specimens, including refractory bricks, mineral sections, and microelectronic components. These resins readily infiltrate pores and voids, providing mechanical support without inducing damage. The use of a vacuum chamber is recommended to enhance resin penetration and eliminate trapped air, while low-stress curing conditions help preserve delicate microstructural features. In cases of highly fragile ceramics, mounting may be performed prior to sawing to prevent fracture or edge damage.<br>
+Castable liquid resins are employed for mounting fragile, porous, or friable ceramic specimens, including refractory bricks, mineral sections, and microelectronic components. Various embedded ceramographic sections are shown in Fig. 3.<br>
 
 This approach, commonly referred to as cold mounting, involves an exothermic polymerization reaction with peak temperatures typically reaching ~120 °C, which is substantially lower than the ~150 °C encountered during compression (hot) mounting. Although unfilled castable resins exhibit relatively low abrasion resistance, this limitation can be mitigated by incorporating ceramic filler particles, thereby improving edge retention and wear resistance during subsequent grinding and polishing operations. Various types of compression-moulding resins, along with their fillers, characteristics, and applications, are provided in Table 1.<br>
 
 <image src="images\image_3.png"><br>
-Figure 2: Images showing various embedded ceramographic sections<br>
+Figure 3: Images showing various embedded ceramographic sections<br>
 
 The below table provides information on different compression mounting resins, their fillers, characteristics, and applications.<br><br>
 
@@ -188,10 +192,10 @@ Chemical etching is a widely employed technique in ceramography to enhance the v
 The choice of etchant depends strongly on the ceramic composition. For example, alumina is commonly etched using hot concentrated phosphoric acid (H<sub>3</sub>PO<sub>4</sub>), whereas ZrO₂ may be etched using HF or mixtures of HCl and H<sub>2</sub>O<sub>2</sub>. Silicon-based ceramics such as SiC and Si<sub>3</sub>N<sub>4</sub>, owing to their high chemical stability, often require aggressive conditions like molten alkalis (e.g., NaOH or KOH) or fluorine-containing acids. Etching parameters such as time, temperature, and reagent concentration must be carefully controlled to avoid excessive material removal, surface damage, or misrepresentation of the true microstructure.<br><br>
 
 <b>5.2 Thermal Etching :</b><br><br>
-Thermal etching is a microstructural revelation technique used for ceramic materials that avoids chemical reagents. In this method, a polished ceramic specimen is heated to a temperature slightly below its sintering temperature (typically 0.8–0.95 T<sub>sinter</sub>), promoting surface diffusion and grain-boundary grooving. This controlled thermal treatment enhances the contrast of grain boundaries, phase distribution, and porosity during microscopic examination. Unlike chemical etching, thermal etching avoids extrinsic contamination or preferential chemical attack, making it ideal for intrinsic microstructural analysis. The technique excels for chemically inert ceramics such as Al<sub>2</sub>O<sub>3</sub>, SiC, and CeO₂. Figure 3 shows a thermally etched scandia-stabilized zirconia sample.<br>
+Thermal etching is a microstructural revelation technique used for ceramic materials that avoids chemical reagents. In this method, a polished ceramic specimen is heated to a temperature slightly below its sintering temperature (typically 0.8–0.95 T<sub>sinter</sub>), promoting surface diffusion and grain-boundary grooving. This controlled thermal treatment enhances the contrast of grain boundaries, phase distribution, and porosity during microscopic examination. Unlike chemical etching, thermal etching avoids extrinsic contamination or preferential chemical attack, making it ideal for intrinsic microstructural analysis. The technique excels for chemically inert ceramics such as Al<sub>2</sub>O<sub>3</sub>, SiC, and CeO₂. Fig. 4 shows a thermally etched scandia-stabilized zirconia sample.<br>
 
 <image src="images\image_6.png"><br><br>
-Figure 3. SEM micrograph of a thermally etched scandia-stabilised zirconia specimen.<br>
+Figure 4. SEM micrograph of a thermally etched scandia-stabilised zirconia specimen.<br>
 
 <b>5.3 Plasma Etching :</b><br><br>
 Plasma etching is an advanced, non-contact technique used to reveal ceramic microstructures by controlled surface modification with ionized gases. A polished specimen is exposed to low-pressure plasma from reactive gases such as oxygen, argon, CF₄, or SF₆, enabling selective interaction via physical sputtering and/or chemical reactions. This preferentially etches grain boundaries, secondary phases, or defect-rich regions, enhancing visibility of grain morphology, phase distribution, and porosity under optical or electron microscopy.<br>
