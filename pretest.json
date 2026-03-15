@@ -1,0 +1,124 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the primary purpose of ceramography?",
+      "answers": {
+        "a": "To measure ceramic density",
+        "b": "To analyze ceramic microstructures",
+        "c": "To synthesize new ceramic compounds",
+        "d": "To color ceramic surfaces"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following is NOT a stage in ceramic sample preparation?",
+      "answers": {
+        "a": "Etching",
+        "b": "Painting",
+        "c": "Grinding",
+        "d": "Mounting"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Why is a liquid coolant used during sawing of ceramics?",
+      "answers": {
+        "a": "To improve cutting speed",
+        "b": "To dissolve ceramic particles",
+        "c": "To reduce overheating and surface damage",
+        "d": "To lubricate metal blades"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What type of saw blade is recommended for dense ceramics?",
+      "answers": {
+        "a": "Carbide-coated blade",
+        "b": "Resin-bonded blade",
+        "c": "Water jet cutter",
+        "d": "Low-density, metal-bonded diamond blade"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which mounting technique is best for porous or fragile ceramics?",
+      "answers": {
+        "a": "Compression mounting",
+        "b": "Castable (cold) mounting",
+        "c": "Mechanical clamping",
+        "d": "Electroplating"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Which abrasive is commonly used during grinding of ceramics?",
+      "answers": {
+        "a": "Sand",
+        "b": "Silicon carbide (SiC)",
+        "c": "Steel wool",
+        "d": "Aluminum"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Which of the following ceramics can be etched with hot phosphoric acid?",
+      "answers": {
+        "a": "Silicon carbide",
+        "b": "Alumina (Al₂O₃)",
+        "c": "Zirconia",
+        "d": "SiAlON"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

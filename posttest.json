@@ -1,0 +1,124 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Improper grinding of ceramic samples may result in:",
+      "answers": {
+        "a": "Color enhancement",
+        "b": "Microcracks and misleading features",
+        "c": "Easier etching",
+        "d": "Reduced hardness"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which factor is most critical in preventing thermal damage during grinding?",
+      "answers": {
+        "a": "Speed of rotation",
+        "b": "Sample size",
+        "c": "Use of lubricants",
+        "d": "Mounting pressure"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What micro structural feature is most commonly revealed after etching ceramics?",
+      "answers": {
+        "a": "Porosity levels only",
+        "b": "Grain boundaries and phases",
+        "c": "Density distribution",
+        "d": "Viscosity patterns"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Thermal etching involves:",
+      "answers": {
+        "a": "Immersing in acids",
+        "b": "Freezing and heating rapidly",
+        "c": "Heating below sintering point to enhance surface diffusion",
+        "d": "Plasma ion bombardment"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5.Which etching method does NOT involve chemical reagents?",
+      "answers": {
+        "a": "Plasma etching",
+        "b": "Chemical etching",
+        "c": "Thermal etching",
+        "d": "Acid bath"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Which type of microscopy is commonly used after ceramographic preparation?",
+      "answers": {
+        "a": "Atomic force microscopy",
+        "b": "Transmission electron microscopy",
+        "c": "Optical and SEM",
+        "d": "UV microscopy"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. If surface features are not visible after polishing, the next step is to:",
+      "answers": {
+        "a": "Re-saw the sample",
+        "b": "Reheat the sample",
+        "c": "Perform etching",
+        "d": "Discard the sample"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  ]
+}
