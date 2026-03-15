@@ -286,71 +286,82 @@
         function drag(ev, value) {
             ev.dataTransfer.setData('text', value);
         }
-        function drop(ev, idx) {
+
+        function drop(ev, idx) 
+        {
             ev.preventDefault();
             if (idx >= correctSteps.length) return;
+
             const value = ev.dataTransfer.getData('text');
-            if (dropped[idx] === null && !dropped.includes(value)) {
-                dropped[idx] = value;
-                const box = document.getElementById('drop' + idx);
-                box.textContent = value;
-                box.classList.add('filled');
-                renderOptions();
-                checkCompletion();
-            }
+            const box = document.getElementById('drop' + idx);
+
+            // allow replacement
+            dropped[idx] = value;
+
+            box.textContent = value;
+
+            // neutral color while placing
+            box.style.backgroundColor = '#e3f2fd';
+            box.style.border = '2px dashed #1976d2';
+
+            box.classList.add('filled');
+
+            renderOptions();
+
+            checkCompletion();
         }
+
+
         function checkCompletion() 
         {
+
             const result = document.getElementById('result');
 
-            if (dropped.every(x => x !== null)) {
+            // wait until all boxes filled
+            if (!dropped.every(x => x !== null)) return;
 
-                let hasError = false;
+            let hasError = false;
 
-                for (let i = 0; i < correctSteps.length; i++) {
-                    const box = document.getElementById('drop' + i);
+            for (let i = 0; i < correctSteps.length; i++) {
 
-                    if (dropped[i] === correctSteps[i]) {
-                        box.style.backgroundColor = '#c8e6c9'; // green
-                        box.style.border = '2px solid #388e3c';
-                    } else {
-                        box.style.backgroundColor = '#ffcdd2'; // red
-                        box.style.border = '2px solid #d32f2f';
-                        hasError = true;
-                    }
-                }
+                const box = document.getElementById('drop' + i);
 
-                if (hasError) {
-                    result.textContent = 'Some steps are incorrect. Resetting...';
-                    result.style.backgroundColor = 'lightpink';
-                    result.style.display = 'flex';
+                if (dropped[i] === correctSteps[i]) {
 
-                    setTimeout(() => {
-                        resetLevel();
-                    }, 2000);
+                    box.style.backgroundColor = '#c8e6c9';
+                    box.style.border = '2px solid #388e3c';
 
                 } else {
 
-                    if (currentLevel < levels.length - 1) {
+                    box.style.backgroundColor = '#ffcdd2';
+                    box.style.border = '2px solid #d32f2f';
 
-                        result.textContent = 'Correct! Loading next step...';
-                        result.style.backgroundColor = 'lightgreen';
-                        result.style.display = 'flex';
-
-                        setTimeout(() => {
-                            loadNextLevel();
-                        }, 1500);
-
-                    } else {
-
-                        result.textContent =
-                            'Congratulations! All steps are correct and you completed all tasks!';
-                        result.style.backgroundColor = 'lightgreen';
-                        result.style.display = 'flex';
-                    }
+                    hasError = true;
                 }
             }
+
+            if (hasError) {
+
+                result.textContent = 'Some steps are incorrect. Resetting...';
+                result.style.backgroundColor = 'lightpink';
+                result.style.display = 'flex';
+
+                setTimeout(() => {
+                    resetLevel();
+                }, 2000);
+
+            } else {
+
+                result.textContent = 'Correct! Loading next step...';
+                result.style.backgroundColor = 'lightgreen';
+                result.style.display = 'flex';
+
+                setTimeout(() => {
+                    loadNextLevel();
+                }, 1500);
+            }
         }
+
         function loadNextLevel() {
             currentLevel++;
             correctSteps = levels[currentLevel].correctSteps;
