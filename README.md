@@ -4,7 +4,7 @@
 <b>Discipline | <b>Mechanical Engineering
 :--|:--|
 <b> Lab | <b> Sample Preparation and Metallography
-<b> Experiment|  <b> Technique for Polishing and Etching of Materials (including Electropolishing, tint etching etc.)
+<b> Experiment|  <b> Advanced Ceramography Techniques: Preparation and Analysis of Ceramic Microstructures
 
 ### About the Experiment 
 

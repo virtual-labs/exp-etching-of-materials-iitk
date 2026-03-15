@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Experiment 3 - Simulator 3</title>
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .text {
+            background-color: yellow;
+            border-radius: 21px;
+            font-size: 22px;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 5px;
+        }
+
+        .sim-title {
+            color: red;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .sim-subtitle {
+            color: red;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .instruction-box {
+            background-color: #f0f8ff;
+            border: 2px solid #0d6efd;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            color: #0d6efd;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .sample-box {
+            width: 120px;
+            height: 120px;
+            background: #fff;
+            border: 2px solid #333;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .sample-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sample-box.selected {
+            border-color: #198754;
+            background-color: #e8f5e9;
+            box-shadow: 0 0 15px rgba(25, 135, 84, 0.5);
+        }
+
+        .sample-container {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #6c757d;
+        }
+
+        .machine-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .machine-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border: 2px solid #6c757d;
+            border-radius: 10px;
+        }
+
+        .blade-box {
+            width: 220px;
+            height: 100px;
+            background: #fff8f0;
+            border: 2px solid #fd7e14;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .blade-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .blade-box.selected {
+            border-color: #198754;
+            background-color: #e8f5e9;
+            box-shadow: 0 0 15px rgba(25, 135, 84, 0.5);
+        }
+
+        .drop-zone {
+            width: 220px;
+            height: 100px;
+            background: #e9ecef;
+            border: 3px dashed #6c757d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #6c757d;
+        }
+
+        .drop-zone.highlight {
+            border-color: #198754;
+            background-color: #e8f5e9;
+        }
+
+        .drop-zone.filled {
+            border-style: solid;
+            border-color: #198754;
+            background-color: #e8f5e9;
+            color: #198754;
+        }
+
+        .result-message {
+            width: 100%;
+            min-height: 50px;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .result-message.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .result-success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .result-error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .arrow-right {
+            font-size: 2rem;
+            color: #0d6efd;
+            margin: 0 10px;
+        }
+
+        .sample-image {
+            width: 45px;
+            height: 45px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: red;
+        }
+
+        .blade-container {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #6c757d;
+        }
+
+        .next-step-btn {
+            display: none;
+            margin: 20px auto;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            font-weight: bold;
+            border: 2px solid #6c757d;
+        }
+
+        .step.active {
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+
+        .step.completed {
+            background-color: #198754;
+            color: white;
+            border-color: #198754;
+        }
+
+        .sub-step {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #6c757d;
+        }
+
+        .sub-step.active {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        .sub-step.completed {
+            color: #198754;
+            font-weight: bold;
+        }
+
+        .result-card {
+            background-color: #f0f8ff;
+            border: 2px solid #0d6efd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        /* blade options wrapper for clearer separation */
+        .blade-options {
+            border-top: 2px dashed #fd7e14;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .param-drop.filled {
+            border-style: solid;
+            border-color: #198754;
+            background-color: #e8f5e9;
+            color: #198754;
+        }
+
+        .param-box {
+            width: 170px;
+            height: 70px;
+            background: #ffe0d6;
+            border: 2px solid #fd7e14;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            cursor: grab;
+            user-select: none;
+            text-align:center;
+        }
+
+        /* step-2 specific boxes  */
+        .mount-box {
+            width: 220px;
+            height: 80px;
+            background: #d8eefe;
+            border: 2px solid #0d6efd;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            cursor: grab;
+            user-select: none;
+            text-align: center;
+        }
+
+        .drop-zone.filled {
+            border-style: solid;
+            border-color: #198754;
+            background: #e8f5e9;
+            color: #198754;
+            padding: 10px;
+        }
+
+        /* keep reserved height in result banner */
+        #step2-result {
+            min-height: 50px;
+            opacity: 0;               /* hidden by default, space reserved */
+            transition: opacity 0.3s ease;
+        }
+
+        #step2-result.success {
+            background: #d4edda;
+            border-color: #198754;
+            color: #155724;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn btn-outline-info mx-2 my-2"><a href="index.html">Go to main page</a></button>
+    <button type="button" class="btn btn-outline-info m-3"><a href="Simulator2_exp3.html">Back</a></button>
+
+    <h2 class="sim-title">Simulator 3</h2>
+    <h3 class="sim-subtitle">Sample selection and cutting</h3>
+
+    <div class="text mb-5">
+        The simulator will be solved when all the steps are completely arranged in sequential order. Choose the
+        appropriate cutting blade on the right for selected sample.
+    </div>
+
+
+    <div class="container">
+        <div id="step1-section" class="row align-items-center">
+            <!-- Left side: Sample selection -->
+            <div class="col-md-2">
+                <div class="sample-container">
+                    <h4 class="text-center mb-3">Select Sample</h4>
+
+
+                    <div class="sample-box" id="sample-al2o3">
+                        <div class="sample-image">Al₂O₃</div>
+                        Alumina
+                    </div>
+
+                    <div class="sample-box" id="sample-sic">
+                        <div class="sample-image">SiC</div>
+                        Silicon Carbide
+                    </div>
+                    <div class="sample-box" id="sample-zro2">
+                        <div class="sample-image">ZrO₂</div>
+                        Zirconia
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="col-md-1 text-center d-none d-md-block">
+                <i class="fa fa-long-arrow-right fa-2x text-primary"></i>
+            </div>
+
+            <!-- Middle: Cutting machine -->
+            <div class="col-md-3">
+                <div class="machine-container">
+                    <img src="images/exp3_sim3.png" alt="Cutting machine schematic" class="img-fluid"
+                        style="max-width:500px;">
+                    <div id="result-message" class="result-message"></div>
+                    <!-- next-step-btn removed; auto transition instead -->
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="col-md-1 text-center d-none d-md-block">
+                <i class="fa fa-long-arrow-right fa-2x text-primary"></i>
+            </div>
+
+            <!-- Right side: Blade selection and drop zone -->
+            <div class="col-md-3">
+                <div class="blade-container text-center">
+                    <h4 class="mb-3">Select Cutting Blade</h4>
+                    <!-- Drop zone & result card row -->
+                    <div class="d-flex flex-wrap align-items-start justify-content-center gap-3 mb-3">
+                        <div class="drop-zone" id="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            Drop blade here
+                        </div>
+                    </div>
+
+                    <!-- Blade options below -->
+                    <div class="d-flex justify-content-center flex-wrap gap-2 blade-options">
+                        <div class="blade-box" id="blade-resin" draggable="true" ondragstart="drag(event, 'resin')">
+                            Resin-Bonded<br>Diamond Blade
+                        </div>
+                        <div class="blade-box" id="blade-metal" draggable="true" ondragstart="drag(event, 'metal')">
+                            Metal-Bonded<br>Diamond Blade
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sixth column: Result -->
+            <div class="col-md-2 d-flex align-items-start justify-content-center">
+                <div id="final-result-card" class="result-card">
+                    Demonstrate Cutting Features
+                </div>
+            </div>
+        </div> <!-- end main row -->
+
+        <!-- Step-2 : Mounting  (hidden until Step-1 completes) -->
+        <div id="step2-section" class="row g-3 align-items-center" style="display:none;">
+
+            <!-- Col-1  : material just finished (auto-highlight) -->
+            <div class="col-md-2">
+                <div class="sample-container">
+                    <h5 class="text-center mb-3">Selected Material</h5>
+
+                    <div id="mtrl-al2o3" class="sample-box">Al₂O₃</div>
+                    <div id="mtrl-sic" class="sample-box">SiC</div>
+                    <div id="mtrl-zro2" class="sample-box">ZrO₂</div>
+                </div>
+            </div>
+
+            <!-- Arrow 1 -->
+            <div class="col-md-1 h-100 text-center d-none d-md-flex align-items-center justify-content-center me-3">
+                <i class="fa fa-long-arrow-right fa-2x text-primary"></i>
+            </div>
+
+            <!-- Col-2  : Mounting-type drop-zone + two draggable options -->
+            <div class="col-md-2">
+                <h5 class="mb-2 text-center">Choose Mounting Type</h5>
+
+                <div id="mount-drop" class="drop-zone mb-3" ondragover="event.preventDefault()"
+                    ondrop="onMountDrop(event)">
+                    Drop Mounting Type
+                </div>
+
+                <div class="d-flex flex-column align-items-center gap-2">
+                    <div id="opt-hot" class="mount-box" draggable="true" ondragstart="onItemDrag(event)">
+                        Hot Mounting<br><small>(Thermosetting resin)</small>
+                    </div>
+                    <div id="opt-cold" class="mount-box" draggable="true" ondragstart="onItemDrag(event)">
+                        Cold Mounting<br><small>(Epoxy resin)</small>
+                    </div>
+                </div>
+                <div id="step2-result" class="result-card">
+                   
+                </div>
+            </div>
+
+            <!-- Arrow 2 -->
+            <div class="col-md-1 h-100 text-center d-none d-md-flex align-items-center justify-content-center">
+                <i class="fa fa-long-arrow-right fa-2x text-primary"></i>
+            </div>
+
+            <!-- Col-3  : Parameter drop-zone + two draggable boxes -->
+            <div class="col-md-3">
+                <h5 class="mb-2 text-center">Set Parameters</h5>
+
+                <div id="param-drop" class="drop-zone mb-3" ondragover="event.preventDefault()"
+                    ondrop="onParamDrop(event)">
+                    Drop Parameter
+                </div>
+
+                <!-- chips in two columns -->
+                <div class="row row-cols-2 g-5">
+                    <div class="col d-flex flex-column align-items-center gap-3">
+                        <div id="opt-temp25" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Temperature 25 °C</div>
+                        <div id="opt-temp160" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Temperature 160 °C</div>
+                        <div id="opt-temp180" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Temperature 180 °C</div>
+                        <div id="opt-temp220" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Temperature 220 °C</div>
+                    </div>
+                    <div class="col d-flex flex-column align-items-center gap-3">
+                        <div id="opt-press03" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Pressure 0.3 MPa</div>
+                        <div id="opt-press20" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Pressure 20 MPa</div>
+                        <div id="opt-press30" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Pressure 30 MPa</div>
+                        <div id="opt-press40" class="param-box" draggable="true" ondragstart="onItemDrag(event)">
+                            Pressure 40 MPa</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arrow 3 -->
+            <div class="col-md-auto h-100 text-center d-none d-md-flex align-items-center justify-content-center ps-3">
+                <i class="fa fa-long-arrow-right fa-2x text-primary" style="padding: 15px;"></i>
+            </div>
+
+            <!-- Col-4  : result card -->
+            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                <div class="result-card" style="padding: 40px;">
+                    Demonstrate Cutting Features
+                </div>
+            </div>
+        </div><!-- /step2 -->
+    </div> <!-- end container -->
+
+    <script>
+        // Define the correct matches for each sample
+        const correctMatches = {
+            'al2o3': 'resin',
+            'sic': 'metal'
+        };
+
+        const sampleOrder = ['al2o3', 'sic'];
+        let currentSampleIndex = 0;
+
+        let selectedSample = null;
+        let selectedBlade = null;
+        let currentSubStep = 1;
+        let completedSamples = [];
+
+        // live state flags
+        // (moved down to STEP-2 section)
+
+        function selectSample(sampleId) {
+            // Reset if already completed this sample
+            if (completedSamples.includes(sampleId)) {
+                return;
+            }
+
+            // Reset previous selection
+            document.querySelectorAll('.sample-box').forEach(box => {
+                box.classList.remove('selected');
+            });
+
+            // Select new sample
+            document.getElementById('sample-' + sampleId).classList.add('selected');
+            selectedSample = sampleId;
+
+            // Update sub-step
+            updateSubStep(2);
+
+            // Reset drop zone
+            const dropZone = document.getElementById('drop-zone');
+            dropZone.innerHTML = 'Drop blade here';
+            dropZone.classList.remove('filled');
+
+            // Hide result message
+            const resMsg = document.getElementById('result-message');
+            resMsg.className = 'result-message';
+            resMsg.textContent = '';
+
+            // next-step button removed
+        }
+
+        function updateSubStep(step) {
+            const subSteps = document.querySelectorAll('.sub-step');
+            if (subSteps.length === 0) {
+                // UI elements absent; simply track step internally
+                currentSubStep = step;
+                return;
+            }
+
+            subSteps.forEach(subStep => {
+                subStep.classList.remove('active', 'completed');
+            });
+            for (let i = 1; i < step; i++) {
+                const el = document.getElementById('sub-step-' + i);
+                if (el) el.classList.add('completed');
+            }
+            const activeEl = document.getElementById('sub-step-' + step);
+            if (activeEl) activeEl.classList.add('active');
+            currentSubStep = step;
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+            if (selectedSample) {
+                document.getElementById('drop-zone').classList.add('highlight');
+            }
+        }
+
+        function drag(ev, bladeType) {
+            ev.dataTransfer.setData("text", bladeType);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            document.getElementById('drop-zone').classList.remove('highlight');
+
+            // Only allow drop if a sample is selected
+            if (!selectedSample) {
+                showResult('Please select a sample first!', false);
+                return;
+            }
+
+            const bladeType = ev.dataTransfer.getData("text");
+            selectedBlade = bladeType;
+
+            // Update drop zone
+            const dropZone = document.getElementById('drop-zone');
+            dropZone.innerHTML = bladeType === 'resin' ? 'Resin-Bonded<br>Diamond Blade' : 'Metal-Bonded<br>Diamond Blade';
+            dropZone.classList.add('filled');
+
+            // Check if correct match
+            const isCorrect = correctMatches[selectedSample] === selectedBlade;
+
+            if (isCorrect) {
+                showResult('Correct! This is the appropriate blade for cutting ' + getSampleName(selectedSample) + '.', true);
+                updateSubStep(3);
+                completedSamples.push(selectedSample);
+
+                // If not all materials matched yet, auto select next sample
+                if (completedSamples.length < sampleOrder.length) {
+                    setTimeout(() => {
+                        currentSampleIndex++;
+                        selectSample(sampleOrder[currentSampleIndex]);
+                    }, 800);
+                } else {
+                    // All matched, go to step2
+                    setTimeout(goToStep2, 1000);
+                }
+            } else {
+                showResult('Incorrect! This blade is not suitable for cutting ' + getSampleName(selectedSample) + '. Try again.', false);
+            }
+        }
+
+        function getSampleName(sampleId) {
+            switch (sampleId) {
+                case 'al2o3': return 'Alumina (Al₂O₃)';
+                case 'sic': return 'Silicon Carbide (SiC)';
+                default: return '';
+            }
+        }
+
+        function showResult(message, isSuccess) {
+            const resultElement = document.getElementById('result-message');
+            resultElement.textContent = message;
+            resultElement.className = 'result-message ' + (isSuccess ? 'result-success' : 'result-error') + ' visible';
+        }
+
+        function goToStep2() {
+            document.getElementById('step1-section').style.display = 'none';
+            document.getElementById('step2-section').style.display = 'flex';
+            document.querySelector('.sim-subtitle').textContent = 'Mounting';
+            prepareStep2('al2o3');      // highlight first material & reset UI
+        }
+
+        // Prevent drag over effects on the entire document
+        document.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+
+        // Automatically select the first sample on page load
+        window.addEventListener('load', () => {
+            selectSample(sampleOrder[currentSampleIndex]);
+        });
+
+        /* ----------  STEP-2 correct answers ---------- */
+        const step2Key = {
+            al2o3: { mount: 'hot', temp: 'temp180', press: 'press20' },
+            zro2: { mount: 'hot', temp: 'temp160', press: 'press30' },
+            sic: {                 // TWO acceptable combinations for SiC
+                hot: { mount: 'hot', temp: 'temp220', press: 'press40' },
+                cold: { mount: 'cold', temp: 'temp25', press: 'press03' }
+            }
+        };
+
+        /* ----------  STEP-2 data & helpers  ---------- */
+        // material currently being processed in Step-2
+        let currentMat = '';
+
+        // ----------  STATE for Step-2 ----------
+        let selectedMount = '', mountOK = false, tempOK = false, pressOK = false;
+        let selectedTemp = '', selectedPress = '';
+        let correctTemp = '', correctPress = '';
+
+        // track which mounting routes for SiC have been completed
+        const sicRoutesCompleted = { hot: false, cold: false };
+
+        function prepareStep2(mat) {
+            currentMat = mat;                       // keep globally accessible
+
+            // reset flags / selections
+            mountOK = tempOK = pressOK = false;
+            selectedMount = selectedTemp = selectedPress = '';
+            correctTemp = correctPress = '';
+
+            // clear banner (keep space, just hide)
+            const resCard = document.getElementById('step2-result');
+            resCard.style.opacity = 0;
+            resCard.classList.remove('success');
+            resCard.textContent = '';
+
+            // show all chips again (in case they were hidden earlier)
+            document.querySelectorAll('#step2-section .param-box, #step2-section .mount-box').forEach(el => {
+                el.style.visibility = 'visible';
+            });
+
+            // reset drop zones
+            const mdz = document.getElementById('mount-drop');
+            mdz.innerHTML = 'Drop Mounting Type';
+            mdz.classList.remove('filled');
+
+            const pdz = document.getElementById('param-drop');
+            pdz.innerHTML = 'Drop Parameter';
+            pdz.classList.remove('filled');
+
+            // highlight corresponding material card in left most column
+            document.querySelectorAll('#step2-section .sample-box').forEach(b => b.classList.remove('selected'));
+            const highlight = document.getElementById('mtrl-' + mat);
+            if (highlight) highlight.classList.add('selected');
+        }
+
+        /* banner helper with auto-hide */
+        let step2BannerTimer;
+        function bannerStep2(msg, good) {
+            const card = document.getElementById('step2-result');
+            clearTimeout(step2BannerTimer);
+
+            if (!msg) {
+                card.textContent = '';
+                card.classList.remove('success');
+                card.style.opacity = 0;
+                return;
+            }
+
+            card.textContent = msg;
+            if (good) {
+                card.classList.add('success');
+            } else {
+                card.classList.remove('success');
+            }
+
+            card.style.opacity = 1;
+
+            // auto hide after 3 s
+            step2BannerTimer = setTimeout(() => {
+                card.style.opacity = 0;
+            }, 3000);
+        }
+
+        /* ----------  Drop handlers ---------- */
+        function onMountDrop(event) {
+            event.preventDefault();
+            const val = event.dataTransfer.getData('text');
+            if (!val) return;
+
+            // only mounting chips allowed here
+            if (!(val === 'hot' || val === 'cold')) {
+                bannerStep2('Please drop a mounting type here.', false);
+                return;
+            }
+
+            const dz = document.getElementById('mount-drop');
+            if (dz.classList.contains('filled')) return; // already chosen
+
+            // block selecting a SiC mounting route that is already completed
+            if (currentMat === 'sic' && sicRoutesCompleted[val]) {
+                bannerStep2('This mounting route for SiC is already done – select the other one.', false);
+                return;
+            }
+
+            dz.innerHTML = val === 'hot' ? 'Hot Mounting<br><small>(Thermosetting resin)</small>'
+                : 'Cold Mounting<br><small>(Epoxy resin)</small>';
+            dz.classList.add('filled');
+
+            // hide chip
+            const chip = document.getElementById('opt-' + val);
+            if (chip) chip.style.visibility = 'hidden';
+
+            // record chosen mount
+            selectedMount = val;
+
+            // determine expected parameters based on material & mount
+            if (currentMat === 'sic') {
+                // two possible correct routes
+                correctTemp = step2Key.sic[val].temp;
+                correctPress = step2Key.sic[val].press;
+                mountOK = true; // both mounts accepted for SiC
+            } else {
+                mountOK = (val === step2Key[currentMat].mount);
+                correctTemp = step2Key[currentMat].temp;
+                correctPress = step2Key[currentMat].press;
+            }
+
+            // clear banner (remove any previous error)
+            bannerStep2('');
+        }
+
+        function onParamDrop(event) {
+            event.preventDefault();
+            const val = event.dataTransfer.getData('text');
+            if (!val) return;
+
+            // ensure mounting already selected
+            if (!selectedMount) {
+                bannerStep2('Select mounting type first!', false);
+                return;
+            }
+
+            // only temperature & pressure chips allowed here
+            if (!(val.startsWith('temp') || val.startsWith('press'))) {
+                bannerStep2('Only temperature or pressure parameters belong here.', false);
+                return;
+            }
+
+            // prevent duplicates of the same category
+            if ((val.startsWith('temp') && selectedTemp) || (val.startsWith('press') && selectedPress)) {
+                return;
+            }
+
+            const dz = document.getElementById('param-drop');
+
+            // append text (keep both lines visible)
+            const txt = displayText(val);
+            if (dz.innerHTML === 'Drop Parameter' || dz.innerHTML.trim() === '') {
+                dz.innerHTML = txt;
+            } else {
+                dz.innerHTML += '<br>' + txt;
+            }
+            dz.classList.add('filled');
+
+            // hide chip visually
+            const chip = document.getElementById('opt-' + val);
+            if (chip) chip.style.visibility = 'hidden';
+
+            // update state & correctness flags
+            if (val.startsWith('temp')) {
+                selectedTemp = val;
+                tempOK = (val === correctTemp);
+            } else {
+                selectedPress = val;
+                pressOK = (val === correctPress);
+            }
+
+            // evaluate when both chosen
+            if (selectedTemp && selectedPress) {
+                if (mountOK && tempOK && pressOK) {
+                    checkStep2Complete();
+                } else {
+                    bannerStep2('Incorrect combination, try again.', false);
+                    resetFullForMaterial();
+                }
+            }
+        }
+
+        function checkStep2Complete() {
+            bannerStep2('Correct combination selected – well done!', true);
+
+            if (currentMat === 'al2o3') {
+                // move to SiC (first route)
+                setTimeout(() => prepareStep2('sic'), 1200);
+                return;
+            }
+
+            if (currentMat === 'sic') {
+                // mark this route finished
+                sicRoutesCompleted[selectedMount] = true;
+
+                // if both routes completed, proceed to ZrO₂; else repeat SiC for remaining route
+                const allDone = sicRoutesCompleted.hot && sicRoutesCompleted.cold;
+                setTimeout(() => prepareStep2(allDone ? 'zro2' : 'sic'), 1200);
+                return;
+            }
+
+            if (currentMat === 'zro2') {
+                bannerStep2('All materials processed successfully!', true);
+                // further progression can be added here
+            }
+        }
+
+        function resetParamZone(){
+            const el=document.getElementById('param-drop');
+            if(el){el.innerHTML='Drop Parameter'; el.classList.remove('filled');}
+            // make chips visible again
+            [selectedTemp,selectedPress].forEach(id=>{if(id){const el=document.getElementById('opt-'+id); if(el) el.style.visibility='visible';}});
+            selectedTemp=''; selectedPress=''; tempOK=pressOK=false;
+        }
+
+        function onItemDrag(ev) {
+            ev.dataTransfer.setData('text', ev.target.id.replace('opt-', ''));
+        }
+
+        function displayText(id) {
+            return document.getElementById('opt-' + id).textContent;
+        }
+
+        function resetFullForMaterial(){
+            // reset mount zone
+            const mdz=document.getElementById('mount-drop');
+            if(mdz){ mdz.innerHTML='Drop Mounting Type'; mdz.classList.remove('filled'); }
+            if(selectedMount) { const el=document.getElementById('opt-'+selectedMount); if(el) el.style.visibility='visible'; }
+            selectedMount=''; mountOK=false;
+            resetParamZone();
+        }
+    </script>
+</body>
+
+</html>
